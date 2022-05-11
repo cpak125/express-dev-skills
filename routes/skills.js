@@ -16,6 +16,12 @@ router.post('/', skillsCtrl.create);
 // GET /skills/:id (show functionality - get single skill)
 router.get('/:id', skillsCtrl.show);
 
+// GET /skills/:id/edit (edit functionality - render edit form)
+router.get('/:id/edit', skillsCtrl.edit);
+
+// // PUT /skills/:id (update functionality - update single skill)
+router.put('/:id', skillsCtrl.update);
+
 // DELETE /skills/:id (delete functionality - delete single skill)
 router.delete('/:id', skillsCtrl.delete);
 

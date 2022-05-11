@@ -4,8 +4,10 @@
 <h3>Name: <%= skill.skill %></h3>
 <h3>Type: <%= skill.type %></h3>
 
+<a href="/skills/<%= skill.id %>/edit"> <button>EDIT</button></a>
+<br><br>
 <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
-  <button type="submit">Delete</button>
+  <button type="submit">DELETE</button>
 </form>
 
 <%- include('../partials/footer') %>

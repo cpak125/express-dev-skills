@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<h1>Edit Skill</h1>
+<form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+  <label>Skill: <input type="text" name="skill" value="<%= skill.skill %>"></label>
+  <br>
+  <label>Type: <input type="text" name="type" value="<%= skill.type %>"></label>
+  <br><br>
+  <button type="submit">SAVE CHANGES</button>
+</form>
+<br>
+<a href="/skills/<%= skill.id %>"><button>CANCEL</button></a>
+<%- include('../partials/footer') %>

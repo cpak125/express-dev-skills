@@ -1,4 +1,4 @@
-const skills = [
+let skills = [
   { id: 1, skill: 'HTML', type: 'Tech' },
   { id: 2, skill: 'CSS', type: 'Tech' },
   { id: 3, skill: ' PHP', type: 'Language' },
@@ -12,7 +12,8 @@ const skills = [
 module.exports = {
   getAll,
   getOne,
-  create
+  create,
+  deleteOne
 };
 
 function getAll() {
@@ -27,4 +28,9 @@ function getOne(id) {
 function create(skill) {
   skill.id = skills.length + 1;
   skills.push(skill);
+}
+
+function deleteOne(id) {
+  id = parseInt(id);
+  skills = skills.filter(skill => skill.id !== id);
 }
